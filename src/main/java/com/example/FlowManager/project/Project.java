@@ -15,12 +15,19 @@ public class Project {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    private String socialname;
     private String document;
-    private String cep;
+    private String phone;
+    private String cellphone;
+    private String email;
+
 
     public Project(RegisterProject dados){
         this.name = dados.name();
-        this.cep = dados.cep();
+        this.socialname = dados.socialname();
         this.document = dados.document();
+        this.phone = dados.phone();
+        this.cellphone = dados.cellphone();
+        this.email = dados.email();
     }
 }

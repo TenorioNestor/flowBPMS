@@ -6,8 +6,11 @@ public record RegisterProject(
         @NotBlank
         String name,
         @NotBlank
-        String document,
+        String socialname,
         @NotBlank
-        String cep
+        String document,
+        String phone,
+        String cellphone,
+        String email
 ) {
 }
