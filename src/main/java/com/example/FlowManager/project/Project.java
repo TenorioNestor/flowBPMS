@@ -1,5 +1,6 @@
 package com.example.FlowManager.project;
 
+import com.example.FlowManager.adress.DataAdress;
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -20,6 +21,8 @@ public class Project {
     private String phone;
     private String cellphone;
     private String email;
+    @Embedded
+    private Adress adress;
 
 
     public Project(RegisterProject dados){
@@ -29,5 +32,6 @@ public class Project {
         this.phone = dados.phone();
         this.cellphone = dados.cellphone();
         this.email = dados.email();
+        this.adress = new Adress(dados.dataAdress());
     }
 }

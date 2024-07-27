@@ -1,5 +1,6 @@
 package com.example.FlowManager.project;
 
+import com.example.FlowManager.adress.DataAdress;
 import jakarta.validation.constraints.NotBlank;
 
 public record RegisterProject(
@@ -11,6 +12,7 @@ public record RegisterProject(
         String document,
         String phone,
         String cellphone,
-        String email
+        String email,
+        DataAdress dataAdress
 ) {
 }
